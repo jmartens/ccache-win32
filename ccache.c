@@ -817,9 +817,7 @@ calculate_common_hash(struct args *args, struct mdfour *hash)
 		hash_int(hash, st.st_size);
 		hash_int(hash, st.st_mtime);
 	} else { /* command string */
-		if (!hash_multicommand_output(hash, compilercheck, orig_args->argv[0])) {
-			fatal("Failure running compiler check command: %s", compilercheck);
-		}
+    fatal("Win32 does not implement arbritary command for COMPILERCHECK");
 	}
 
 	/*
