@@ -307,11 +307,6 @@ Hash the compiler\(cqs mtime and size, which is fast\&. This is the default\&.
 Don\(cqt hash anything\&. This may be good for situations where you can safely use the cached results even though the compiler\(cqs mtime or size has changed (e\&.g\&. if the compiler is built as part of your build system and the compiler\(cqs source has not changed, or if the compiler only has changes that don\(cqt affect code generation)\&. You should only use the
 \fBnone\fR
 setting if you know what you are doing\&.
-.RE
-.PP
-\fIa command string\fR
-.RS 4
-Hash the standard output and standard error output of the specified command\&. The string will be split on whitespace to find out the command and arguments to run\&. No other interpretation of the command string will be done, except that the special word \(lq%compiler%\(rq will be replaced with the path to the compiler\&. Several commands can be specified with semicolon as separator\&. Examples:
 .sp
 .RS 4
 .ie n \{\
